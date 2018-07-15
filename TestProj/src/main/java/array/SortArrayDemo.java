@@ -1,5 +1,8 @@
 package array;
 
+import java.sql.Array;
+import java.util.Arrays;
+
 public class SortArrayDemo {
 
 	public static void main(String[] args) {
@@ -50,6 +53,7 @@ public class SortArrayDemo {
 		    {
 		        distinctIntegers++;
 		    }
+//		    Arrays.sort(arr);
 		}
 	}
 
