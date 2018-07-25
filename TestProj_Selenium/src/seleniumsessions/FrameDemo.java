@@ -12,15 +12,15 @@ public class FrameDemo {
 		d.get("https://www.freecrm.com/index.html");
 		d.findElement(By.name("username")).sendKeys("naveenk");;
 		d.findElement(By.name("password")).sendKeys("Test@123");
-		d.findElement(By.xpath("//input[@type='submit']")).click();
+//		d.findElement(By.xpath("//input[@type='submit']")).click();
+//		d.findElement(By.xpath("//input[@value='login']")).click();
+		Browser.sleep();
+		d.findElement(By.xpath("//input[@class='btn btn-small']")).click();
 		Browser.sleep();
 		d.switchTo().frame("mainpanel");
-		d.findElement(By.xpath("//a[contains(text(),'Contacts']")).click();
+		Browser.sleep();
+		d.findElement(By.xpath("//a[contains(text(),'Contacts')]")).click();
 		
-//		d.findElement(By.xpath("//li[@class='c1 gnf_nav_depth1_item gnf-has-dropdown']")).click();
-//		Actions a= new Actions(d);
-//		a.moveToElement(d.findElement(By.xpath("//li[@class='c1 gnf_nav_depth1_item gnf-has-dropdown']")));
-		d.findElement(By.xpath("//button[@class='button-secondary']")).click();;
 	}
 
 }
