@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class ActionsClassDemo_mouserhovermultiple {
+public class ActionsClassDemo_mouserhovermultiple_assigment {
 
 	public static void main(String[] args) {
 // assignment to do
