@@ -1,6 +1,10 @@
 package com.restapi.tests;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+
+import javax.print.attribute.HashAttributeSet;
 
 import org.apache.http.client.ClientProtocolException;
 import org.testng.annotations.BeforeMethod;
@@ -8,6 +12,8 @@ import org.testng.annotations.Test;
 
 import com.restapi.base.TestBase;
 import com.restapi.client.RestClient;
+import com.restapi.data.Users;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 public class GetAPITest extends TestBase 
@@ -22,10 +28,29 @@ public class GetAPITest extends TestBase
 		url=prop.getProperty("URL")+prop.getProperty("serviceURL");
 	}
 
-	@Test
+//	@Test
 	public void getAPITest() throws ClientProtocolException, IOException {
 	
 		RestClient restclient= new RestClient();
 		restclient.get(url);
+		System.out.println("------------------------");
+		restclient.getResponse(url);
+	}
+	
+	@Test // marshalling jackson api
+	public void postAPITest() throws ClientProtocolException, IOException {
+	
+		RestClient restclient= new RestClient();
+		HashMap<String , String> hashmap= new HashMap<String,String>();
+		hashmap.put("content-Type", "application/json");
+
+//		jackson api
+		ObjectMapper mapper= new ObjectMapper();
+		Users user = new Users("irfan","architect");
+//		System.out.println("E:\\MyWorkSpace\\TestProj\\src\\main\\java\\com\\restapi\\data\\users.json");
+//		object to json
+		mapper.writeValue(new File ("E:\\MyWorkSpace\\TestProj\\src\\main\\java\\com\\restapi\\data\\users.json"),user);
+		
+		
 	}
 }
