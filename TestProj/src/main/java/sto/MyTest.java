@@ -1,4 +1,4 @@
-package sto;
+/*package sto;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -82,3 +82,4 @@ public class MyTest {
 	}
 
 }
+*/

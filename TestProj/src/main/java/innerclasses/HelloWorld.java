@@ -1,4 +1,4 @@
-package innerclasses;
+/*package innerclasses;
 
 public class HelloWorld {
 	void display() {
@@ -18,3 +18,4 @@ public class HelloWorld {
 		obj.display();
 	}
 }
+*/

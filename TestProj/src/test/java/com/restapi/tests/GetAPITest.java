@@ -28,7 +28,7 @@ public class GetAPITest extends TestBase
 		url=prop.getProperty("URL")+prop.getProperty("serviceURL");
 	}
 
-//	@Test
+	@Test
 	public void getAPITest() throws ClientProtocolException, IOException {
 	
 		RestClient restclient= new RestClient();
@@ -48,6 +48,7 @@ public class GetAPITest extends TestBase
 		ObjectMapper mapper= new ObjectMapper();
 		Users user = new Users("irfan","architect");
 //		System.out.println("E:\\MyWorkSpace\\TestProj\\src\\main\\java\\com\\restapi\\data\\users.json");
+
 //		object to json
 		mapper.writeValue(new File ("E:\\MyWorkSpace\\TestProj\\src\\main\\java\\com\\restapi\\data\\users.json"),user);
 		

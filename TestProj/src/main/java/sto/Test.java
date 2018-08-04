@@ -1,4 +1,4 @@
-package sto;
+/*package sto;
 
 public class Test {
 int i = 10;
@@ -21,4 +21,4 @@ static int j = 20;
 		Test t = new Test();
 		t.m1();
 	}
-}
+}*/

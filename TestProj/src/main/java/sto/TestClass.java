@@ -1,4 +1,4 @@
-package sto;
+/*package sto;
 
 
 class Outer {
@@ -30,3 +30,4 @@ public class TestClass {
 	}
 }
 
+*/

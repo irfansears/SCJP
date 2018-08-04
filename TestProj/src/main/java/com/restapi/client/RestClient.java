@@ -37,6 +37,9 @@ public class RestClient {
 		String respString= EntityUtils.toString(closeableHttpResponse.getEntity(),"UTF-8");
 		JSONObject jsonResponse= new JSONObject(respString);
 		System.out.println("jsonResponse : "+jsonResponse);
+		jsonResponse.get("per_page");
+		jsonResponse.get("[]per_page");
+		
 		
 //		3. allheaders
 		Header[] headerArr=closeableHttpResponse.getAllHeaders();

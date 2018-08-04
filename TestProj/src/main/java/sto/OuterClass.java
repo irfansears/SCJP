@@ -1,4 +1,4 @@
-package sto;
+/*package sto;
 
 public class OuterClass {
 	class InnerClass
@@ -20,3 +20,4 @@ public class OuterClass {
 	
 
 }
+*/
