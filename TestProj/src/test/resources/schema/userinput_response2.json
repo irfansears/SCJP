@@ -1,0 +1,44 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "name": {
+      "$id": "/properties/name",
+      "type": "string",
+      "title": "The Name Schema ",
+      "default": "",
+      "examples": [
+        "morpheus"
+      ]
+    },
+    "job": {
+      "$id": "/properties/job",
+      "type": "string",
+      "title": "The Job Schema ",
+      "default": "",
+      "examples": [
+        "leader"
+      ]
+    },
+    "id": {
+      "$id": "/properties/id",
+      "type": "string",
+      "title": "The Id Schema ",
+      "default": "",
+      "examples": [
+        "965"
+      ]
+    },
+    "createdAt": {
+      "$id": "/properties/createdAt",
+      "type": "string",
+      "title": "The Createdat Schema ",
+      "default": "",
+      "examples": [
+        "2018-08-04T22:17:51.691Z"
+      ]
+    }
+  }
+}

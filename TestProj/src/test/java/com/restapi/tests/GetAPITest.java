@@ -14,6 +14,8 @@ import com.restapi.base.TestBase;
 import com.restapi.client.RestClient;
 import com.restapi.data.Users;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.generated.vos.userinput.UserinputPost;
+import com.google.gson.Gson;
 
 
 public class GetAPITest extends TestBase 
@@ -28,11 +30,11 @@ public class GetAPITest extends TestBase
 		url=prop.getProperty("URL")+prop.getProperty("serviceURL");
 	}
 
-	@Test
+//	@Test
 	public void getAPITest() throws ClientProtocolException, IOException {
 	
 		RestClient restclient= new RestClient();
-		restclient.get(url);
+//		restclient.get(url);
 		System.out.println("------------------------");
 		restclient.getResponse(url);
 	}
@@ -52,6 +54,13 @@ public class GetAPITest extends TestBase
 //		object to json
 		mapper.writeValue(new File ("E:\\MyWorkSpace\\TestProj\\src\\main\\java\\com\\restapi\\data\\users.json"),user);
 		
+		UserinputPost body= new UserinputPost();
+		body.setName("Irfan");body.setJob("tech lead");
+		Gson gson = new Gson();
+		String json= gson.toJson(body);
+		System.out.println(json);
+		url=prop.getProperty("URL")+prop.getProperty("serviceURL");
+		restclient.postRequest(url, json, hashmap);
 		
 	}
 }

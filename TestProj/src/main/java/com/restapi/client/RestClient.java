@@ -19,6 +19,11 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.fasterxml.jackson.core.JsonParser;
+import com.generated.vos.offer.OfferSchema;
+import com.generated.vos.userinput.UserinputResponse2;
+import com.google.gson.Gson;
+
 public class RestClient {
 	
 //	1. GET
@@ -38,7 +43,7 @@ public class RestClient {
 		JSONObject jsonResponse= new JSONObject(respString);
 		System.out.println("jsonResponse : "+jsonResponse);
 		jsonResponse.get("per_page");
-		jsonResponse.get("[]per_page");
+//		jsonResponse.get("[]per_page");
 		
 		
 //		3. allheaders
@@ -64,12 +69,21 @@ public class RestClient {
 			 singleJsonObject= br.readLine();
 			 System.out.println(singleJsonObject);
 			 
-			 System.out.println(response.getEntity().getContentLength()); //-1
+			/* System.out.println(response.getEntity().getContentLength()); //-1
 			 System.out.println(response.getEntity().getContentType()); //Content-Type: application/json; charset=utf-8
 			 System.out.println(response.getEntity().getContentEncoding()); //null
 			 System.out.println(response.getStatusLine().getReasonPhrase()); //OK
 			 System.out.println(response.getStatusLine().getStatusCode());//200
-			 
+*/			 
+
+			 Gson gson = new Gson();
+//			 JsonParser p = new JsonParser();
+			 OfferSchema f= gson.fromJson(singleJsonObject, OfferSchema.class);
+			System.out.println("ppage :"+f.getPage());
+			System.out.println(f.getPerPage());
+			System.out.println("inside aray: "+f.getData().get(0).getFirstName());
+			System.out.println("inside aray: "+f.getData().get(1).getFirstName());
+			System.out.println("inside aray: "+f.getData().get(2).getFirstName());
 			 
 		} catch (ClientProtocolException e) {
 			e.printStackTrace();
@@ -88,7 +102,7 @@ public class RestClient {
 		
 		for(Map.Entry<String, String> entry:hashmap.entrySet())
 		{
-			httpget.addHeader("accept","application/json"); // or
+//			httpget.addHeader("accept","application/json"); // or
 			httpget.addHeader(entry.getKey(),entry.getValue());
 		}
 		try {
@@ -130,6 +144,13 @@ public class RestClient {
 		 singleJsonObject= br.readLine();
 		 System.out.println(singleJsonObject);
 	
+		 Gson gson = new Gson();
+//		 JsonParser p = new JsonParser();
+		UserinputResponse2 f= gson.fromJson(singleJsonObject, UserinputResponse2.class);
+		System.out.println("inside aray: "+f.getName());
+		System.out.println("inside aray: "+f.getJob());
+		System.out.println("inside aray: "+f.getId());
+		System.out.println(f.getCreatedAt());
 	}
 	
 		

@@ -75,6 +75,32 @@
 							<targetPackage>com.generated.vos.offer</targetPackage>
 						</configuration>
 					</execution>
+					<execution>
+						<id>jex2</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<sourcePaths>
+								<sourcePath>${basedir}/src/test/resources/schema/userinput_post.json</sourcePath>
+							</sourcePaths>
+							<targetPackage>com.generated.vos.userinput</targetPackage>
+						</configuration>
+					</execution>
+					<execution>
+						<id>jex3</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<sourcePaths>
+								<sourcePath>${basedir}/src/test/resources/schema/userinput_response2.json</sourcePath>
+							</sourcePaths>
+							<targetPackage>com.generated.vos.userinput</targetPackage>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 		</plugins>
@@ -93,7 +119,7 @@
 			<version>6.8</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- 1. https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
