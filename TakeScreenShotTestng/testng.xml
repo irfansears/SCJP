@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ScreenShot">
+	<listeners>
+		<listener class-name="mylistener.CustomListener"></listener>
+	</listeners>
+	<test name="MyScreenShotTestUsingListener">
+		<classes>
+			<class name="testngListenerConcept.SccreenShotTest"></class>
+			<class name="testngListenerConcept.SccreenShotTest2"></class>
+		</classes>
+	</test>
+</suite>
