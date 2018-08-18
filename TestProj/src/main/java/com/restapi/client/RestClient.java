@@ -154,5 +154,24 @@ public class RestClient {
 	}
 	
 		
+	public String post(String url, String payload, HashMap<String , String> hashmap) throws ClientProtocolException, IOException {
+		String singleJsonObject;
+		CloseableHttpResponse response;
+		
+		CloseableHttpClient httpclient= HttpClients.createDefault();
+		
+		HttpPost httppost=new HttpPost(url);
+		httppost.setEntity(new StringEntity (payload));
+		for(Map.Entry<String, String> entry:hashmap.entrySet())
+		{
+			httppost.addHeader(entry.getKey(),entry.getValue());
+		}
+	
+		response =httpclient.execute(httppost);
+		 BufferedReader br = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+		 singleJsonObject= br.readLine();
+		 System.out.println(singleJsonObject);
+		 return singleJsonObject;
+	}
 
 }

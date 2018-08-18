@@ -13,8 +13,12 @@ import org.testng.annotations.Test;
 import com.restapi.base.TestBase;
 import com.restapi.client.RestClient;
 import com.restapi.data.Users;
+
+import junit.framework.Assert;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.generated.vos.userinput.UserinputPost;
+import com.generated.vos.userinput.UserinputResponse2;
 import com.google.gson.Gson;
 
 
@@ -39,7 +43,7 @@ public class GetAPITest extends TestBase
 		restclient.getResponse(url);
 	}
 	
-	@Test // marshalling jackson api
+//	@Test // marshalling jackson api
 	public void postAPITest() throws ClientProtocolException, IOException {
 	
 		RestClient restclient= new RestClient();
@@ -62,5 +66,30 @@ public class GetAPITest extends TestBase
 		url=prop.getProperty("URL")+prop.getProperty("serviceURL");
 		restclient.postRequest(url, json, hashmap);
 		
+	}
+	
+	@Test // marshalling jackson api
+	public void postTest() throws ClientProtocolException, IOException {
+
+//		create object
+		RestClient restclient= new RestClient();// create object
+		url=prop.getProperty("URL")+prop.getProperty("serviceURL"); // url
+//		create response body
+		UserinputPost body= new UserinputPost();
+		body.setName("Irfan1");body.setJob("tech leader");
+//		convert java body to string by using gson
+		Gson gson = new Gson();
+		String json= gson.toJson(body);
+		HashMap<String , String> hashmap= new HashMap<String,String>();
+		hashmap.put("content-Type", "application/json");
+		String response =restclient.post(url, json, hashmap);
+		
+		UserinputResponse2 f= gson.fromJson(response, UserinputResponse2.class);
+		System.out.println("inside aray: "+f.getName());
+		System.out.println("inside aray: "+f.getJob());
+		System.out.println("inside aray: "+f.getId());
+		System.out.println(f.getCreatedAt());
+		Assert.assertEquals(body.getName(), f.getName());
+		Assert.assertEquals(body.getJob(), f.getJob());
 	}
 }
