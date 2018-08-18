@@ -13,14 +13,17 @@ import seleniumsessions.Browser;
 
 public class ExceptionTimeOutTestDemo {
 
-//	@Test(groups="smoke",timeOut=2,inv)
+	@Test(invocationCount=5,expectedExceptions=NumberFormatException.class)
 	public void test1() {
 
-		int count=0;
+		String a= "a0a";
+		Integer.parseInt(a);
+		
+	/*	int count=0;
 		while(true){
 			
 			System.out.println(++count);
-		}
+		}*/
 	}
 	
 	

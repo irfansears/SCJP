@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Ebay" verbose="1">
+	<test name="Regression">
+		<parameter name="url" value="www.google.com"></parameter>
+		<parameter name="email" value="ir@gmail.com"></parameter>
+		<parameter name="password" value="xxxx"></parameter>
+		<classes>
+			<class name="com.parameters.ParameterTest"></class>
+
+		</classes>
+	</test>
+</suite>
