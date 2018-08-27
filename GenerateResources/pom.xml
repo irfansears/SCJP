@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>GenerateResources</groupId>
+	<artifactId>GenerateResources</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>GenerateResources</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+
+				<groupId>org.jsonschema2pojo</groupId>
+				<artifactId>jsonschema2pojo-maven-plugin</artifactId>
+				<version>0.4.37</version>
+				<configuration>
+					<annotationStyle>gson</annotationStyle>
+					<sourceType>jsonschema</sourceType>
+				</configuration>
+				<executions>
+					<execution>
+						<id>jex1</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<sourcePaths>
+								<sourcePath>${basedir}/src/test/resources/JSchema/offer-schema.json</sourcePath>
+							</sourcePaths>
+							<targetPackage>com.generated.vos.offer</targetPackage>
+						</configuration>
+					</execution>
+					<execution>
+						<id>jex2</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<sourcePaths>
+								<sourcePath>${basedir}/src/test/resources/JSchema/userinput_post.json</sourcePath>
+							</sourcePaths>
+							<targetPackage>com.generated.vos.userinput</targetPackage>
+						</configuration>
+					</execution>
+					<execution>
+						<id>jex3</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<sourcePaths>
+								<sourcePath>${basedir}/src/test/resources/JSchema/userinput_response2.json</sourcePath>
+							</sourcePaths>
+							<targetPackage>com.generated.vos.userinput</targetPackage>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<dependencies>
+
+		<!-- 1. convert json schema to pojo : https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.4</version>
+		</dependency>
+	</dependencies>
+</project>
