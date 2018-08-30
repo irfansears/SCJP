@@ -34,7 +34,8 @@
 					<!-- The name of your generated source package -->
 					<schemaDirectory>${project.basedir}/src/main/xsd/</schemaDirectory>
 					<arguments>${project.basedir}/src/main/xsd/global.xjb</arguments>
-				</configuration>
+<!-- 					<bindingDirectory>${project.basedir}/src/main/xsd/</bindingDirectory>
+ -->				</configuration>
 			</plugin>
 		</plugins>
 	</build>
