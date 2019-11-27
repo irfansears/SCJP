@@ -8,7 +8,11 @@ import cucumber.api.CucumberOptions;
 @CucumberOptions(
 			features ="E:\\MyWorkSpace\\BDDDemo\\src\\main\\java\\features\\Login.feature",
 			glue={"stepDefinition"},
-			format = {"pretty", "html:test-out"}
+			format = {"pretty", "html:test-out","json:json-out/cucu.json","junit:junit-out/cuc.xml"},
+			dryRun=false,
+			strict=true,
+			monochrome=true
+			
 			) 
 
 	public class TestRunner {

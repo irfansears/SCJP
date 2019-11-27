@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="0.364085">
+<testcase classname="Login Test" name="google login test" time="0.353767">
+<system-out><![CDATA[Given user is already on login page.........................................passed
+When title is page is google................................................passed
+Then user enter testing in search text box..................................passed
+Then user clicks login button...............................................passed
+And check if same title is present..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Test" name="Checkout Test" time="0.000836">
+<system-out><![CDATA[Given user added product to cart............................................passed
+When user did checkout......................................................passed
+Then order number generated.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Test" name="This is parametarized test with examples keyword" time="0.007807">
+<system-out><![CDATA[Given test1.................................................................passed
+When test2..................................................................passed
+Then user enter "data1" and "pwd1" in search text box.......................passed
+And close Browser...........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Test" name="This is parametarized test with examples keyword 2" time="0.000823">
+<system-out><![CDATA[Given test1.................................................................passed
+When test2..................................................................passed
+Then user enter "data2" and "pwd2" in search text box.......................passed
+And close Browser...........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Test" name="This is parametarized test with examples keyword 3" time="0.000852">
+<system-out><![CDATA[Given test1.................................................................passed
+When test2..................................................................passed
+Then user enter "data3" and "pwd3" in search text box.......................passed
+And close Browser...........................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

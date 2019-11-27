@@ -1,0 +1,5 @@
+2018-09-04 00:54:50,527  INFO [main] TestWithMain:10 - inmain method
+2018-09-04 00:54:50,535  WARN [main] TestWithMain:12 - warning..
+2018-09-04 00:54:50,536 DEBUG [main] TestWithMain:13 - debug
+2018-09-04 00:54:50,536 FATAL [main] TestWithMain:14 - fatal
+2018-09-04 00:54:50,537  INFO [main] TestWithMain:15 - complted the main method

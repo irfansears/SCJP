@@ -1,0 +1,344 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "google login test",
+        "description": "",
+        "id": "login-test;google-login-test",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 353009098,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user is already on login page",
+            "match": {
+              "location": "LogintestDefinition.userOnloginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 163534,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "title is page is google",
+            "match": {
+              "location": "LogintestDefinition.titleTest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 177991,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enter testing in search text box",
+            "match": {
+              "location": "LogintestDefinition.enterText()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 252981,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks login button",
+            "match": {
+              "location": "LogintestDefinition.clickBtn()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 163534,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check if same title is present",
+            "match": {
+              "location": "LogintestDefinition.titleCheck()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "Checkout Test",
+        "description": "",
+        "id": "login-test;checkout-test",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 486537,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user added product to cart",
+            "match": {
+              "location": "CheckOutTest.user_added_product_to_cart()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 175732,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user did checkout",
+            "match": {
+              "location": "CheckOutTest.user_did_checkout()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 173472,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "order number generated",
+            "match": {
+              "location": "CheckOutTest.order_number_generated()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 24,
+        "name": "This is parametarized test with examples keyword",
+        "description": "",
+        "id": "login-test;this-is-parametarized-test-with-examples-keyword;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 396187,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "test1",
+            "match": {
+              "location": "DataDriverParametarized.test1()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 198319,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "test2",
+            "match": {
+              "location": "DataDriverParametarized.test2()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6938914,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user enter \"data1\" and \"pwd1\" in search text box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data1",
+                  "offset": 12
+                },
+                {
+                  "val": "pwd1",
+                  "offset": 24
+                }
+              ],
+              "location": "DataDriverParametarized.enterText1(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 273762,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "close Browser",
+            "match": {
+              "location": "DataDriverParametarized.close_Browser()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 25,
+        "name": "This is parametarized test with examples keyword",
+        "description": "",
+        "id": "login-test;this-is-parametarized-test-with-examples-keyword;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 258402,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "test1",
+            "match": {
+              "location": "DataDriverParametarized.test1()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 132364,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "test2",
+            "match": {
+              "location": "DataDriverParametarized.test2()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 302674,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user enter \"data2\" and \"pwd2\" in search text box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data2",
+                  "offset": 12
+                },
+                {
+                  "val": "pwd2",
+                  "offset": 24
+                }
+              ],
+              "location": "DataDriverParametarized.enterText1(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 129653,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "close Browser",
+            "match": {
+              "location": "DataDriverParametarized.close_Browser()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "This is parametarized test with examples keyword",
+        "description": "",
+        "id": "login-test;this-is-parametarized-test-with-examples-keyword;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 276924,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "test1",
+            "match": {
+              "location": "DataDriverParametarized.test1()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 139591,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "test2",
+            "match": {
+              "location": "DataDriverParametarized.test2()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 303578,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user enter \"data3\" and \"pwd3\" in search text box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data3",
+                  "offset": 12
+                },
+                {
+                  "val": "pwd3",
+                  "offset": 24
+                }
+              ],
+              "location": "DataDriverParametarized.enterText1(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 131460,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "close Browser",
+            "match": {
+              "location": "DataDriverParametarized.close_Browser()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Login Test",
+    "description": "",
+    "id": "login-test",
+    "keyword": "Feature",
+    "uri": "E:/MyWorkSpace/BDDDemo/src/main/java/features/Login.feature"
+  }
+]

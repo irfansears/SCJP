@@ -6,8 +6,13 @@ import java.util.Arrays;
 public class SortArrayDemo {
 
 	public static void main(String[] args) {
+		
+		String s1= "book = 12 AND x2 = 50 AND cost = 45";
+		String s2= "pen = 1 AND case = 10 AND bala = 40";
+		
+		System.out.println(s1.replaceAll("(?:(.*?)(?==))+", ""));
 
-		int [] arr= {7,2,1,4,1,7};
+		/*int [] arr= {7,2,1,4,1,7};
 //		sort arrar
 		boolean swapped=true;
 		int k=0;
@@ -54,7 +59,7 @@ public class SortArrayDemo {
 		        distinctIntegers++;
 		    }
 //		    Arrays.sort(arr);
-		}
+		}*/
 	}
 
 }
